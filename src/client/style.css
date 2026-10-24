@@ -1,0 +1,68 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, sans-serif;
+  --accent: #0e7490;
+}
+body {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1.5rem 1rem 3rem;
+  line-height: 1.5;
+}
+header p,
+.hint {
+  opacity: 0.75;
+}
+form {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 28rem;
+}
+label {
+  display: grid;
+  gap: 0.25rem;
+}
+input,
+button {
+  font: inherit;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #8884;
+}
+button {
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+button.danger {
+  background: #b91c1c;
+}
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+.toolbar span {
+  margin-right: auto;
+  font-family: ui-monospace, monospace;
+}
+#call iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 0.75rem;
+  background: #111;
+}
+#log {
+  font-family: ui-monospace, monospace;
+  font-size: 0.85rem;
+  padding-left: 1.25rem;
+}

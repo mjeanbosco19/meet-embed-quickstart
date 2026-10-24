@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ETITE Meet embed quickstart</title>
+    <link rel="stylesheet" href="/src/client/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>ETITE Meet embed quickstart</h1>
+      <p>Your backend mints a join URL with the tenant API key; this page only ever sees that URL.</p>
+    </header>
+
+    <main>
+      <form id="join-form">
+        <label>
+          Your name
+          <input name="displayName" required maxlength="80" autocomplete="name" />
+        </label>
+        <label>
+          Room id <span class="hint">(leave empty to start a new call)</span>
+          <input name="roomId" maxlength="64" />
+        </label>
+        <button type="submit">Join call</button>
+        <p id="status" role="status"></p>
+      </form>
+
+      <section id="call-area" hidden>
+        <div class="toolbar">
+          <span id="room-label"></span>
+          <button type="button" data-cmd="toggleAudio">Mute / unmute</button>
+          <button type="button" data-cmd="toggleVideo">Camera on / off</button>
+          <button type="button" data-cmd="leave" class="danger">Leave</button>
+        </div>
+        <div id="call"></div>
+      </section>
+
+      <section>
+        <h2>Events</h2>
+        <ol id="log" aria-live="polite"></ol>
+      </section>
+    </main>
+
+    <script type="module" src="/src/client/main.ts"></script>
+  </body>
+</html>
